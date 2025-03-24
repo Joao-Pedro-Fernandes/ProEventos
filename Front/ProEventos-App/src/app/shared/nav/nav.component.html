@@ -1,8 +1,10 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary" style="background-color: whitesmoke;">
+<nav class="navbar navbar-expand-lg bg-white shadow-sm" style="background-color: whitesmoke;" *ngIf="showMenu()">
   <div class="container-fluid">
-    <a class="navbar-brand" style="color: black; font-size: 200%;" routerLink="dashboard">ProEventos</a>
+    <a class="navbar-brand" style="color: black; font-size: 200%;" routerLink="dashboard">
+      <i class="fa fa-users mb-2"></i>
+    </a>
     <button class="navbar-toggler" (click)="isCollapsed = !isCollapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <img src="assets\menuIcon.png" width="8%">
+      <img src="assets\menuIcon.png" width="20px">
     </button>
     <div class="collapse navbar-collapse" style="font-size: 130%;" [collapse]="isCollapsed" [isAnimated]="true" id="navbarNav">
       <ul class="navbar-nav mr-auto" >
@@ -24,11 +26,11 @@
             João
           </a>
           <div *dropdownMenu class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" routerLink="perfil">
+            <a class="dropdown-item" routerLink="user/perfil">
               Perfil
             </a>
             <div role="separator" class="divider"></div>
-            <a class="dropdown-item" routerLink="sair">
+            <a class="dropdown-item" routerLink="user/login">
               Sair
             </a>
           </div>

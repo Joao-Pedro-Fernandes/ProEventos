@@ -1,0 +1,4 @@
+.table-row:hover {
+  transition: box-shadow 0.1s ease-in-out;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
